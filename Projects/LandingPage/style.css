@@ -32,6 +32,62 @@ body {
    color: #F9FaF8;
    font-size: 18px;
 }
-
-
 /* ^^^^ NAVBAR ^^^^ */
+
+
+/* vvvv BOX 1 vvvv */
+.box-1 {
+    background-color: #1F2937; 
+    color: #F9FaF8;
+    display: flex;
+    padding: 8rem;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+}
+
+.slogan {
+    font-size: 48px;
+    font-weight: extra-bold;
+}
+
+.sign-up {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    width: 6rem;
+    border: none;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #3882F6;
+    color: #F9FaF8;
+    font-weight: bold;
+}
+
+
+/* ^^^^ BOX 1 ^^^^ */
+
+
+/* vvvv BOX 2 vvvv */
+
+/* ^^^^ BOX 2 ^^^^ */
+
+
+/* vvvv BOX 3 vvvv */
+
+/* ^^^^ BOX 3 ^^^^ */
+
+
+/* vvvv BOX 4 vvvv */
+
+/* ^^^^ BOX 4 ^^^^ */
+
+
+/* vvvv FOOTER vvvv */
+
+/* ^^^^ FOOTER ^^^^ */
