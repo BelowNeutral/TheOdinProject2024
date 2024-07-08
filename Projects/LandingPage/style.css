@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+* {
+    font-family: 'Roboto';
+}
+
+body {
+    margin: 0;
+}
+
+/* vvvv NAVBAR vvvv */
+.header {
+    display: flex;
+    justify-content: space-around;
+    background-color: #1F2937;
+    color: #F9FaF8;
+    align-items: center;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 2rem;
+    justify-content: space-between;
+}
+
+.header-buttons li {
+    list-style: none;
+}
+
+.header-buttons a {
+   text-decoration: none; 
+   color: #F9FaF8;
+   font-size: 18px;
+}
+
+
+/* ^^^^ NAVBAR ^^^^ */
