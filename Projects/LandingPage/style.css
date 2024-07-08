@@ -42,19 +42,21 @@ body {
     display: flex;
     padding: 8rem;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 
 .text {
     display: flex;
     flex-direction: column;
     width: 25%;
+    padding: 0;
 }
 
 .slogan {
     font-size: 48px;
-    font-weight: extra-bold;
+    font-weight: bolder;
 }
+
 
 .sign-up {
     display: flex;
@@ -68,13 +70,20 @@ body {
     background-color: #3882F6;
     color: #F9FaF8;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .placeholder-img {
+    display: flex;
+    text-align: center;
     background-color: rgb(109, 109, 109);
-    width: 40%;
-    height: 300px;
+    padding: 75px 100px 75px 100px;
+    margin-right: 7%;
+    scale: 150%;
 }
+
+
+
 
 /* ^^^^ BOX 1 ^^^^ */
 
