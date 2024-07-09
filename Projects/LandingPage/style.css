@@ -19,7 +19,7 @@ body {
 
 .header-buttons {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: space-between;
 }
 
@@ -40,9 +40,9 @@ body {
     background-color: #1F2937; 
     color: #F9FaF8;
     display: flex;
-    padding: 8rem;
+    padding-left: 15%;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .text {
@@ -76,20 +76,45 @@ body {
 .placeholder-img {
     display: flex;
     text-align: center;
-    background-color: rgb(109, 109, 109);
-    padding: 75px 100px 75px 100px;
-    margin-right: 8%;
-    scale: 150%;
+    justify-content: space-evenly;
 }
 
-
-
-
+.placeholder-img img {
+    border-radius: 50px;
+    scale: 55%;
+}
 /* ^^^^ BOX 1 ^^^^ */
 
 
 /* vvvv BOX 2 vvvv */
+.box-2 {
+    display: flex;
+    flex-direction: column;
+}
 
+.small-header {
+    text-align: center;
+}
+
+.four-boxes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.column1, .column2, .column3, .column4 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box1, .box2, .box3, .box4 {
+    width: 100px;
+    height: 100px;
+    border-color: gray;
+    border-width: 10px;
+    background-color: rgb(143, 143, 143);
+}
 /* ^^^^ BOX 2 ^^^^ */
 
 
