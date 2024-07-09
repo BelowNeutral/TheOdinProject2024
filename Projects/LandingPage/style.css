@@ -92,14 +92,21 @@ body {
     flex-direction: column;
 }
 
+.box-2 p {
+    width: 40%;
+    text-align: center;
+}
+
 .small-header {
     text-align: center;
+    font-weight: bolder;
 }
 
 .four-boxes {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    padding: 10px;
 }
 
 .column1, .column2, .column3, .column4 {
@@ -109,11 +116,10 @@ body {
 }
 
 .box1, .box2, .box3, .box4 {
-    width: 100px;
-    height: 100px;
-    border-color: gray;
-    border-width: 10px;
-    background-color: rgb(143, 143, 143);
+    width: 200px;
+    height: 200px;
+    border: 3px #3882F6 solid;
+    border-radius: 10px;
 }
 /* ^^^^ BOX 2 ^^^^ */
 
