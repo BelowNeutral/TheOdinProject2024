@@ -95,7 +95,7 @@ body {
 
 .box-2 p {
     width: 40%;
-    text-align: center;
+    text-align: center; /* might remove in the future */
 }
 
 .small-header {
@@ -127,7 +127,29 @@ body {
 
 
 /* vvvv BOX 3 vvvv */
+.box-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #E5E7EB;
+    padding: 60px 0 60px 0;
+}
 
+.box-3 .long {
+    width: 40%;
+    font-size: 30px;
+    font-style: italic;
+}
+
+.box-3 .quote {
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    top: 0;
+    left: 15rem;
+    margin-top: 0;
+}
 /* ^^^^ BOX 3 ^^^^ */
 
 
