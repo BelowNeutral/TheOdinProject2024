@@ -181,7 +181,7 @@ body {
     align-items: center;
 }
 
-.text-4 {
+.text-4 { /* I genuinely could not figure out a way to get the texts closer together. */
     color: white; /* Text color for contrast */
     display: flex;
     flex-direction: column;
@@ -205,5 +205,14 @@ body {
 
 
 /* vvvv FOOTER vvvv */
+footer {
+    background: #1F2937;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    color: #F9FaF8;
+    text-align: center;
+    align-items: center;
+}
 
 /* ^^^^ FOOTER ^^^^ */
