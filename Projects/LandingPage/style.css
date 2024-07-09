@@ -32,6 +32,13 @@ body {
    color: #F9FaF8;
    font-size: 18px;
 }
+
+.header-buttons a:hover {
+    background-color: #F9FaF8;
+    color: #1F2937;
+    border-radius: 5px;
+    padding: 10px;
+}
 /* ^^^^ NAVBAR ^^^^ */
 
 
