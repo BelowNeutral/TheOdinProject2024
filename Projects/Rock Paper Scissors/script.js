@@ -1,12 +1,48 @@
-// Get an input from the user
+// Declaring choices using number values
+const rock = 1;
+const paper = 2;
+const scissors = 3;
 
-// IF user input is not rock/paper/scissors, print "invalid choice"
+// Computer generates a random number from 1-3
+function getComputerChoice() {
+    return Math.floor(Math.random() * 3) + 1;
+}
 
-// FUNCTION (called "getComputerChoice") that randomly throws out one of the three: rock, paper, or scissors after user input
+// console.log(getComputerChoice());
 
-// IF input from user is rock AND output from computer is paper, OUTPUT "computer wins with paper"
+function getHumanChoice() {
+    // Prompts user for input
+    let userInput = prompt("Rock, Paper, or Scissors?");
+    userInput = userInput.toLowerCase();
 
-// ELSE-IF input from user is paper AND output from computer is paper, OUTPUT "computer ties with paper"
+    // Converts the user input from string to corresponding number values
+    switch (userInput) {
+        case "rock":
+            return rock;
+        case "paper":
+            return paper;
+        case "scissors":
+            return scissors;
+        default:
+            return null;
+    }
+}
 
-// ELSE-IF input from user is scissors AND output from computer is paper, OUTPUT "computer loses with paper"
+// console.log(getHumanChoice());
 
+// Initializing scores for human player and computer
+let humanScore = 0;
+let computerScore = 0;
+
+function playRound(humanChoice, computerChoice) {
+    let human = getHumanChoice();
+    let computer = getComputerChoice();
+    if (humanChoice == rock && computerChoice == scissors) {
+        console.log("The player wins with rock!");
+        humanScore++;
+    }
+    console.log(humanScore);
+}
+
+console.log(playRound());
+// playRound(humanSelection, computerSelection);
