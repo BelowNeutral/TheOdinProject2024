@@ -1,0 +1,1 @@
+Pseudocode will be written via comments in the script.js file. However, this file will be used as scratch paper, so I apologize if nothing here makes sense.
