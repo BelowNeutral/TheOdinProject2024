@@ -8,7 +8,7 @@ function getComputerChoice() {
     return Math.floor(Math.random() * 3) + 1;
 }
 
-// console.log(getComputerChoice());
+console.log(getComputerChoice());
 
 function getHumanChoice() {
     // Prompts user for input
@@ -35,13 +35,39 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    let human = getHumanChoice();
+    let human = getHumanChoice()
     let computer = getComputerChoice();
-    if (humanChoice == rock && computerChoice == scissors) {
-        console.log("The player wins with rock!");
-        humanScore++;
+    
+    if (human === computer) {
+        return ("tie");
     }
-    console.log(humanScore);
+    else if (human === rock && computer === paper) {
+        computerScore++;
+        return ("computer wins (paper beats rock)");
+    }
+    else if (human === rock && computer === scissors) {
+        humanScore++;
+        return ("human wins (rock beats scissors)");
+    }
+    else if (human === paper && computer === rock) {
+        humanScore++;
+        return ("human wins (paper beats rock)");
+    }
+    else if (human === paper && computer === scissors) {
+        computerScore++;
+        return ("computer wins (scissors beat paper)");
+    }
+    else if (human === scissors && computer === rock) {
+        computerScore++;
+        return ("computer wins (rock beats scissors)");
+    }
+    else if (human === scissors && computer === paper) {
+        humanScore++;
+        return ("human wins (scissors beat paper)");
+    }
+    else {
+        return ("ERROR 101");
+    }
 }
 
 console.log(playRound());
