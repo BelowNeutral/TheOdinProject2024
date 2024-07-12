@@ -35,41 +35,38 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    const human = getHumanChoice(humanChoice)
-    const computer = getComputerChoice(computerChoice);
+    const human = getHumanChoice(humanChoice);
+    const computer = computerChoice; // Assuming computerChoice is already numeric
     
+    if (human === null) {
+        console.log("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
+        return;
+    }
+
     if (human === computer) {
-        return ("tie");
-    }
-    else if (human === rock && computer === paper) {
+        console.log("It's a tie!");
+    } else if (human === rock && computer === paper) {
         computerScore++;
-        return ("computer wins (paper beats rock)");
-    }
-    else if (human === rock && computer === scissors) {
+        console.log(`Computer wins! Paper beats Rock. Current Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    } else if (human === rock && computer === scissors) {
         humanScore++;
-        return ("human wins (rock beats scissors)");
-    }
-    else if (human === paper && computer === rock) {
+        console.log(`You win! Rock beats Scissors. Current Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    } else if (human === paper && computer === rock) {
         humanScore++;
-        return ("human wins (paper beats rock)");
-    }
-    else if (human === paper && computer === scissors) {
+        console.log(`You win! Paper beats Rock. Current Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    } else if (human === paper && computer === scissors) {
         computerScore++;
-        return ("computer wins (scissors beat paper)");
-    }
-    else if (human === scissors && computer === rock) {
+        console.log(`Computer wins! Scissors beat Paper. Current Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    } else if (human === scissors && computer === rock) {
         computerScore++;
-        return ("computer wins (rock beats scissors)");
-    }
-    else if (human === scissors && computer === paper) {
+        console.log(`Computer wins! Rock beats Scissors. Current Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    } else if (human === scissors && computer === paper) {
         humanScore++;
-        return ("human wins (scissors beat paper)");
-    }
-    else {
-        return ("ERROR 101");
+        console.log(`You win! Scissors beat Paper. Current Scores - Human: ${humanScore}, Computer: ${computerScore}`);
+    } else {
+        console.log("Error occurred.");
     }
 }
 
-console.log(playRound());
-// playRound(humanSelection, computerSelection);
+playRound("rock", getComputerChoice());
 
