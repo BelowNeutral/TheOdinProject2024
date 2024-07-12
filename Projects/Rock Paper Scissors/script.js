@@ -35,8 +35,8 @@ let humanScore = 0;
 let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
-    let human = getHumanChoice()
-    let computer = getComputerChoice();
+    const human = getHumanChoice(humanChoice)
+    const computer = getComputerChoice(computerChoice);
     
     if (human === computer) {
         return ("tie");
@@ -72,3 +72,4 @@ function playRound(humanChoice, computerChoice) {
 
 console.log(playRound());
 // playRound(humanSelection, computerSelection);
+
