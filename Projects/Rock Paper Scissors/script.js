@@ -28,7 +28,7 @@ function getHumanChoice() {
     }
 }
 
-// console.log(getHumanChoice());
+getHumanChoice();
 
 // Initializing scores for human player and computer
 let humanScore = 0;
@@ -68,5 +68,23 @@ function playRound(humanChoice, computerChoice) {
     }
 }
 
-playRound("rock", getComputerChoice());
+// playRound("rock", getComputerChoice());
 
+function playGame() {
+    for (let i = 0; i < 5; i++) {
+        if (playRound.computerScore < 5 || playRound.humanScore < 5) {
+            playRound();
+        }
+        else if (playRound.computerScore > playRound.humanScore) {
+            console.log("The computer wins!");
+        }
+        else if (playRound.humanScore > playRound.computerScore) {
+            console.log("You win!");
+        }
+        else {
+            console.log("ERROR");
+        }
+    }
+}
+
+playGame();
