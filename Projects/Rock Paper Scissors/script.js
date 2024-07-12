@@ -28,7 +28,7 @@ function getHumanChoice() {
     }
 }
 
-getHumanChoice();
+// getHumanChoice();
 
 // Initializing scores for human player and computer
 let humanScore = 0;
@@ -36,7 +36,7 @@ let computerScore = 0;
 
 function playRound(humanChoice, computerChoice) {
     const human = getHumanChoice(humanChoice);
-    const computer = computerChoice; // Assuming computerChoice is already numeric
+    const computer = computerChoice;
     
     if (human === null) {
         console.log("Invalid choice. Please enter 'rock', 'paper', or 'scissors'.");
@@ -72,19 +72,21 @@ function playRound(humanChoice, computerChoice) {
 
 function playGame() {
     for (let i = 0; i < 5; i++) {
-        if (playRound.computerScore < 5 || playRound.humanScore < 5) {
-            playRound();
-        }
-        else if (playRound.computerScore > playRound.humanScore) {
-            console.log("The computer wins!");
-        }
-        else if (playRound.humanScore > playRound.computerScore) {
-            console.log("You win!");
-        }
-        else {
-            console.log("ERROR");
+        console.log(`Round ${i + 1}`);
+        const humanChoice = getHumanChoice();
+        const computerChoice = getComputerChoice();
+        playRound(humanChoice, computerChoice);
+        
+        // Check if one player has reached a score of 3
+        if (humanScore === 3) {
+            console.log("You win the game!");
+            break;
+        } else if (computerScore === 3) {
+            console.log("The computer wins the game!");
+            break;
         }
     }
 }
+
 
 playGame();
