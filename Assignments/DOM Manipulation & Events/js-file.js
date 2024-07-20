@@ -26,4 +26,3 @@ h1Tag.textContent = "I'm in a div";
 const pTagChild = document.createElement("p");
 divTag.appendChild(pTagChild); 
 pTagChild.textContent = "ME TOO!";
-
