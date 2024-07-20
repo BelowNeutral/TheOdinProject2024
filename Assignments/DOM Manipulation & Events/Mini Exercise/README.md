@@ -1,3 +1,5 @@
+NOTE: THIS MINI EXERCISE WILL BE REVISITED, AS I AM STRUGGLING AND WISH TO MOVE ON IN THE MEANTIME. (07/20/24)
+
 ----- DIRECTIONS -----
 In this challenge we want to make a simple shopping list example that allows you to dynamically add items to the list using a form input and button. When you add an item to the input and press the button:
 
