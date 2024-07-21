@@ -1,21 +1,43 @@
+/* Reset global height to avoid layout issues */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Use a container for centering the content */
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-score-panel {
+    border: black solid;
+    border-width: 1px;
+    height: 10rem;
+    width: 10rem;
 }
 
 .buttons {
-    border: black solid;
-    height: 50rem;
-    width: 50rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 1rem;
 }
 
 .buttons button {
     width: 5rem;
     height: 5rem;
+    cursor: pointer;
 }
 
