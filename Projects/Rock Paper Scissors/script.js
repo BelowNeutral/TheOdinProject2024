@@ -70,27 +70,28 @@ function playRound(humanChoice, computerChoice) {
 
 // playRound("rock", getComputerChoice());
 
-function playGame() {
-    for (let i = 0; i < 5; i++) {
-        console.log(`Round ${i + 1}`);
-        const humanChoice = getHumanChoice();
-        const computerChoice = getComputerChoice();
-        playRound(humanChoice, computerChoice);
+// THIS SECTION HAS TO DO WITH THE GAME LOOPING UP TO 5 TIMES
+// function playGame() {
+//     for (let i = 0; i < 5; i++) {
+//         console.log(`Round ${i + 1}`);
+//         const humanChoice = getHumanChoice();
+//         const computerChoice = getComputerChoice();
+//         playRound(humanChoice, computerChoice);
         
-        // Check if one player has reached a score of 3
-        if (humanScore === 3) {
-            console.log("You win the game!");
-            break;
-        } else if (computerScore === 3) {
-            console.log("The computer wins the game!");
-            break;
-        }
-        else if (humanScore === computerScore && humanScore < i && computerScore < i) {
-            console.log("There appears to be a tie!");
-            break;
-        }
-    }
-}
+//         // Check if one player has reached a score of 3
+//         if (humanScore === 3) {
+//             console.log("You win the game!");
+//             break;
+//         } else if (computerScore === 3) {
+//             console.log("The computer wins the game!");
+//             break;
+//         }
+//         else if (humanScore === computerScore && humanScore < i && computerScore < i) {
+//             console.log("There appears to be a tie!");
+//             break;
+//         }
+//     }
+// }
 
 
-playGame();
+// playGame();

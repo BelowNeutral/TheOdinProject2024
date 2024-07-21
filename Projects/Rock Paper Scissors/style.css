@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons {
+    border: black solid;
+    height: 50rem;
+    width: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.buttons button {
+    width: 5rem;
+    height: 5rem;
+}
+
