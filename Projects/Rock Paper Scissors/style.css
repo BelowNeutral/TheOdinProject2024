@@ -1,0 +1,48 @@
+/* Reset global height to avoid layout issues */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Use a container for centering the content */
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-score-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: black solid;
+    border-width: 1px;
+    height: 10rem;
+    width: 10rem;
+    margin: 2rem;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.buttons button {
+    width: 5rem;
+    height: 5rem;
+    cursor: pointer;
+    scale: 140%;
+}
+
