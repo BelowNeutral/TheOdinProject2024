@@ -1,3 +1,5 @@
+// --------- CONSOLE STUFF ---------
+
 // Declaring values for rock, paper, scissors
 const rock = 1;
 const paper = 2;
@@ -8,36 +10,40 @@ let humanScore = 0;
 let computerScore = 0;
 let roundWinner = '';
 
-// Function that plays a round
-function playRound(playerChoice, computerChoice) {
-    if (playerChoice === computerChoice) {
-        roundWinner = "It's a tie."
-    }
-    if (
-        (playerChoice === rock && computerChoice === scissors) || (playerChoice === paper && computerChoice === rock) || (playerChoice === scissors && computerChoice === paper)
-    ) {
-        humanScore++;
-        roundWinner = "The human wins!"
-    }
-    if (
-        (computerChoice === rock && playerChoice === scissors) || (computerChoice === paper && playerChoice === rock) || (computerChoice === scissors && playerChoice === paper) 
-    ) {
-        computerScore++;
-        roundWinner = "The computer wins!"
-    }
+// Function for getting the player's choice
+function getPlayerChoice(buttonID) {
+    return choicesList[buttonID];
 }
 
-// Function that randomizes a number from 1-3 (computer's choice)
-function getRandomChoice() {
-    let randomNumber = Math.floor(Math.random() * 3) + 1;
-    switch (randomNumber) {
-      case 1:
-        return 'ROCK'
-      case 2:
-        return 'PAPER'
-      case 3:
-        return 'SCISSORS'
+// Function that plays a round
+function playRound(playerChoice) {
+    const human = getPlayerChoice(playerChoice);
+    const computer = getComputerChoice();
+
+    if (human === computer) {
+        roundWinner = "It's a tie.";
+    } else if (
+        (human === rock && computer === scissors) || 
+        (human === paper && computer === rock) || 
+        (human === scissors && computer === paper)
+    ) {
+        humanScore++;
+        roundWinner = "The human wins!";
+    } else {
+        computerScore++;
+        roundWinner = "The computer wins!";
     }
+
+    // Update the result on the page
+    let result = document.querySelector('.current-score-panel');
+    result.textContent = `${roundWinner} Current Scores - Human: ${humanScore}, Computer: ${computerScore}`;
+}
+
+// Function that randomizes a number from 0-2 (computer's choice)
+function getComputerChoice() {
+    const choices = [rock, paper, scissors];
+    let randomNumber = Math.floor(Math.random() * 3); // Random number from 0 to 2
+    return choices[randomNumber];
 }
 
 // Function for when the game ends
@@ -45,25 +51,30 @@ function endGame() {
     return humanScore === 5 || computerScore === 5;
 }
 
-// Linking rock button
-let ROCK = document.querySelector('#rockBtn');
+//--------- USER INTERFACE --------- 
 
-// Function for when rock button is clicked
-ROCK.addEventListener('click', function() {
-    
-});
+// Identifying the buttons and their values
+const choicesList = {
+    rockBtn: rock,
+    paperBtn: paper,
+    scissorsBtn: scissors
+};
 
-// Linking paper button
-let PAPER = document.querySelector('#paperBtn');
+// Function to add event listeners to buttons
+function setupButton(buttonID) {
+    const button = document.querySelector(`#${buttonID}`);
+    button.addEventListener('click', function() {
+        playRound(buttonID);
+        if (endGame()) {
+            alert(`Game Over! ${humanScore === 5 ? "Human" : "Computer"} wins!`);
+            humanScore = 0;
+            computerScore = 0;
+            document.querySelector('.current-score-panel').textContent = '';
+        }
+    });
+}
 
-// Function for when paper button is clicked
-
-
-// Linking scissors button
-let SCISSORS = document.querySelector('#scissorsBtn');
-
-// Function for when scissors button is clicked
-
-
-// If-statement: After user input (from buttons), computer will randomly select numbers from 1-3 (rock, paper, or scissors)
-
+// Setting up event listeners
+setupButton('rockBtn');
+setupButton('paperBtn');
+setupButton('scissorsBtn');

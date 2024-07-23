@@ -22,6 +22,9 @@ body {
 }
 
 .current-score-panel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     border: black solid;
     border-width: 1px;
     height: 10rem;
