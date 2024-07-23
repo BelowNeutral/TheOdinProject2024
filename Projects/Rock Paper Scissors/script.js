@@ -8,19 +8,21 @@ let humanScore = 0;
 let computerScore = 0;
 
 // Linking rock button
-document.querySelector();
+let ROCK = document.querySelector('#rockBtn');
 
 // Function for when rock button is clicked
-
+ROCK.addEventListener('click', function() {
+    
+});
 
 // Linking paper button
-document.querySelector();
+let PAPER = document.querySelector('#paperBtn');
 
 // Function for when paper button is clicked
 
 
 // Linking scissors button
-document.querySelector();
+let SCISSORS = document.querySelector('#scissorsBtn');
 
 // Function for when scissors button is clicked
 
