@@ -3,9 +3,29 @@ const rock = 1;
 const paper = 2;
 const scissors = 3;
 
-// Declaring values for human & computer scores
+// Setting human and computer score to 0
 let humanScore = 0;
 let computerScore = 0;
+let roundWinner = '';
+
+// Write a function that plays a round
+function playRound(playerChoice, computerChoice) {
+    if (playerChoice === computerChoice) {
+        roundWinner = "It's a tie."
+    }
+    if (
+        (playerChoice === rock && computerChoice === scissors) || (playerChoice === paper && computerChoice === rock) || (playerChoice === scissors && computerChoice === paper)
+    ) {
+        humanScore++;
+        roundWinner = "The human wins!"
+    }
+    if (
+        (computerChoice === rock && playerChoice === scissors) || (computerChoice === paper && playerChoice === rock) || (computerChoice === scissors && playerChoice === paper) 
+    ) {
+        computerScore++;
+        roundWinner = "The computer wins!"
+    }
+}
 
 // Linking rock button
 let ROCK = document.querySelector('#rockBtn');
