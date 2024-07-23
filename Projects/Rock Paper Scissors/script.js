@@ -28,3 +28,4 @@ let SCISSORS = document.querySelector('#scissorsBtn');
 
 
 // If-statement: After user input (from buttons), computer will randomly select numbers from 1-3 (rock, paper, or scissors)
+let computerChoice = Math.floor(Math.random() * 3) + 1;
