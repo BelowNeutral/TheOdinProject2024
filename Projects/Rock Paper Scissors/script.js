@@ -8,7 +8,7 @@ let humanScore = 0;
 let computerScore = 0;
 let roundWinner = '';
 
-// Write a function that plays a round
+// Function that plays a round
 function playRound(playerChoice, computerChoice) {
     if (playerChoice === computerChoice) {
         roundWinner = "It's a tie."
@@ -25,6 +25,24 @@ function playRound(playerChoice, computerChoice) {
         computerScore++;
         roundWinner = "The computer wins!"
     }
+}
+
+// Function that randomizes a number from 1-3 (computer's choice)
+function getRandomChoice() {
+    let randomNumber = Math.floor(Math.random() * 3) + 1;
+    switch (randomNumber) {
+      case 1:
+        return 'ROCK'
+      case 2:
+        return 'PAPER'
+      case 3:
+        return 'SCISSORS'
+    }
+}
+
+// Function for when the game ends
+function endGame() {
+    return humanScore === 5 || computerScore === 5;
 }
 
 // Linking rock button
@@ -48,4 +66,4 @@ let SCISSORS = document.querySelector('#scissorsBtn');
 
 
 // If-statement: After user input (from buttons), computer will randomly select numbers from 1-3 (rock, paper, or scissors)
-let computerChoice = Math.floor(Math.random() * 3) + 1;
+
