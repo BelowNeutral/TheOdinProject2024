@@ -6,10 +6,25 @@
 
 body {
     display: flex;
+    /* flex-direction: column; */
     justify-content: center;
     align-items: center;
     height: 100vh;
     background-color: #f0f0f0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 2rem;
+    margin: 2rem;
+}
+
+.buttons button {
+    padding: 1rem;
 }
 
 .container {
@@ -20,7 +35,6 @@ body {
     border: 2px solid black;
 }
 
-
 /* -------- FROM JS FILE -------- */
 .square {
     width: calc(100% / 16); /* 16 columns */
@@ -28,4 +42,3 @@ body {
     border: 1px solid rgba(0, 0, 0, 0.1);
     box-sizing: border-box;
 }
-
