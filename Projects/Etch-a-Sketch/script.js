@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Creating the 16x16 grid
     for (let i = 0; i < 16 * 16; i++) {
         const squareDiv = document.createElement("div");
-        squareDiv.classList.add('grid-item');
+        squareDiv.classList.add('grid-item'); // classList.add is nesting a class in the squareDiv div
         container.appendChild(squareDiv);
     }
 });
