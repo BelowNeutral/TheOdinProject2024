@@ -1,26 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
-    margin: 0;
-    background: lightgrey;
+    background-color: #f0f0f0;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: repeat(16, 1fr);
-    grid-template-rows: repeat(16, 1fr);
-    gap: none;
-    width: 40rem;  
-    height: 40rem;
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;  /* Define the total width of the container */
+    height: 400px; /* Define the total height of the container */
+    border: 2px solid black;
 }
 
 
 /* -------- FROM JS FILE -------- */
-.grid-item {
-    background-color: white;
-    /* border: 1px solid black; */
-    width: 100%; /* This does not mean that it will fit 100% to the page. Instead, it just fills 100% of the .container class that it is nested in. */
-    height: 100%;
+.square {
+    width: calc(100% / 16); /* 16 columns */
+    height: calc(100% / 16); /* 16 rows */
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
+

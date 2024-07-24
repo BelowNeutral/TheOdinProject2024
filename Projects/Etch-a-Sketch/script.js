@@ -1,11 +1,10 @@
-document.addEventListener('DOMContentLoaded', function() {
-    // Linking .container from the HTML file
-    const container = document.querySelector('.container');
+// Linking .container from the HTML file
+const container = document.querySelector('.container');
 
-    // Creating the 16x16 grid
-    for (let i = 0; i < 16 * 16; i++) {
-        const squareDiv = document.createElement("div");
-        squareDiv.classList.add('grid-item'); // classList.add is nesting a class in the squareDiv div
-        container.appendChild(squareDiv);
-    }
-});
+// ------ Creating the 16x16 square divs ------
+// For-loop: creates grid
+for (let i = 0; i < 256; i++) {
+    const squareDiv = document.createElement('div');
+    squareDiv.classList.add('square');
+    container.appendChild(squareDiv);
+}
