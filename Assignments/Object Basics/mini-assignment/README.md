@@ -1,0 +1,1 @@
+Let’s do some quick practice before your assignment! Rewrite the sumOfTripledEvens(array) function using these three methods (map, filter, and reduce).
