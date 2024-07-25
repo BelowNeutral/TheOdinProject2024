@@ -1,6 +1,6 @@
 let addBtn = document.querySelector('#addBtn');
 
 addBtn.addEventListener('click', function() {
-    document.querySelector('li');
+    document.querySelector('ul');
     document.body.appendChild('li');
 });
