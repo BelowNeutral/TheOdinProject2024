@@ -44,8 +44,15 @@ function divide(num1, num2) {
     // If user clicks on divide button, call divide() function
 // }
 
+// Function that clears everything on the screen
+function clear() {
+    // If user clicks on CLEAR, then reset screen
+}
+
 
 // --------- Linking HTML Buttons ---------
+// Input Bar (Screen)
+const INPUT = document.querySelector('#screen');
 // Clear button
 const CLEAR = document.querySelector('#clearBtn');
 
@@ -70,4 +77,3 @@ const ZERO = document.querySelector('#zeroBtn');
 
 
 // --------- Event Listeners ---------
-let 
