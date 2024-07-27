@@ -43,3 +43,28 @@ function divide(num1, num2) {
     // If user clicks on divide button, call divide() function
 // }
 
+
+// --------- Linking HTML buttons ---------
+// Clear button
+const clearBtn = document.querySelector('#clearBtn');
+
+// Operation buttons
+const addBtn = document.querySelector('#addBtn');
+const subtractBtn = document.querySelector('#subtractBtn');
+const multiplyBtn = document.querySelector('#multiplyBtn');
+const divideBtn = document.querySelector('#divideBtn');
+const equalBtn = document.querySelector('#equalBtn');
+
+// Number buttons
+const oneBtn = document.querySelector('#oneBtn');
+const twoBtn = document.querySelector('#twoBtn');
+const threeBtn = document.querySelector('#threeBtn');
+const fourBtn = document.querySelector('#fourBtn');
+const fiveBtn = document.querySelector('#fiveBtn');
+const sixBtn = document.querySelector('#sixBtn');
+const sevenBtn = document.querySelector('#sevenBtn');
+const eightBtn = document.querySelector('#eightBtn');
+const nineBtn = document.querySelector('#nineBtn');
+const zeroBtn = document.querySelector('#zeroBtn');
+
+
