@@ -70,14 +70,9 @@ function divide(num1, num2) {
     // If user clicks on divide button, call divide() function
 // }
 
-// Function that clears everything on the screen
-function clear(input) {
-    // If user clicks on CLEAR, then reset screen
-    if (INPUT.value !== "") {
-        INPUT.value = "";
-    }
-}
-
 
 // --------- Event Listeners ---------
-// const 
+CLEAR.addEventListener('click', function() {
+    console.log('Clear button clicked');
+    INPUT.textContent = '';
+});
