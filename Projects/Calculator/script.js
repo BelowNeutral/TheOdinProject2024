@@ -1,3 +1,4 @@
+// --------- Functions for basic operations ---------
 // Basic functions (add, sub, mult, div)
 function add(num1, num2) {
     let expression = `${num1} + ${num2}`;
