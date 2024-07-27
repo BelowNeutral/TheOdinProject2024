@@ -81,4 +81,14 @@ function clear() {
 
 
 // --------- Event Listeners ---------
-CLEAR.addEventListener('click', clear);
+// CLEAR.addEventListener('DOMContentLoaded', clear);
+
+
+
+// ---------- Testing ----------
+if (document.getElementById("screen")) {
+    alert("Element exists");
+}
+else {
+    alert("Element does not exist");
+}
