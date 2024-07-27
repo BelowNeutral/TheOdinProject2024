@@ -1,3 +1,29 @@
+// --------- Linking HTML Buttons ---------
+// Input Bar (Screen)
+const INPUT = document.querySelector('#screen');
+
+// Clear button
+const CLEAR = document.querySelector('#clearBtn');
+
+// Operation buttons
+const ADD = document.querySelector('#addBtn');
+const SUBTRACT = document.querySelector('#subtractBtn');
+const MULTIPLY = document.querySelector('#multiplyBtn');
+const DIVIDE = document.querySelector('#divideBtn');
+const EQUAL = document.querySelector('#equalBtn');
+
+// Number buttons
+const ONE = document.querySelector('#oneBtn');
+const TWO = document.querySelector('#twoBtn');
+const THREE = document.querySelector('#threeBtn');
+const FOUR = document.querySelector('#fourBtn');
+const FIVE = document.querySelector('#fiveBtn');
+const SIX = document.querySelector('#sixBtn');
+const SEVEN = document.querySelector('#sevenBtn');
+const EIGHT = document.querySelector('#eightBtn');
+const NINE = document.querySelector('#nineBtn');
+const ZERO = document.querySelector('#zeroBtn');
+
 // --------- Functions For Basic Operations ---------
 // Basic functions (add, sub, mult, div)
 function add(num1, num2) {
@@ -45,36 +71,13 @@ function divide(num1, num2) {
 // }
 
 // Function that clears everything on the screen
-function clear() {
+function clear(input) {
     // If user clicks on CLEAR, then reset screen
+    if (INPUT.value !== "") {
+        INPUT.value = "";
+    }
 }
 
 
-// --------- Linking HTML Buttons ---------
-// Input Bar (Screen)
-const INPUT = document.querySelector('#screen');
-
-// Clear button
-const CLEAR = document.querySelector('#clearBtn');
-
-// Operation buttons
-const ADD = document.querySelector('#addBtn');
-const SUBTRACT = document.querySelector('#subtractBtn');
-const MULTIPLY = document.querySelector('#multiplyBtn');
-const DIVIDE = document.querySelector('#divideBtn');
-const EQUAL = document.querySelector('#equalBtn');
-
-// Number buttons
-const ONE = document.querySelector('#oneBtn');
-const TWO = document.querySelector('#twoBtn');
-const THREE = document.querySelector('#threeBtn');
-const FOUR = document.querySelector('#fourBtn');
-const FIVE = document.querySelector('#fiveBtn');
-const SIX = document.querySelector('#sixBtn');
-const SEVEN = document.querySelector('#sevenBtn');
-const EIGHT = document.querySelector('#eightBtn');
-const NINE = document.querySelector('#nineBtn');
-const ZERO = document.querySelector('#zeroBtn');
-
-
 // --------- Event Listeners ---------
+// const 
