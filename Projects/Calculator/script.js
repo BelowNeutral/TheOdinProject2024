@@ -1,4 +1,4 @@
-// --------- Functions for basic operations ---------
+// --------- Functions For Basic Operations ---------
 // Basic functions (add, sub, mult, div)
 function add(num1, num2) {
     let expression = `${num1} + ${num2}`;
@@ -45,27 +45,29 @@ function divide(num1, num2) {
 // }
 
 
-// --------- Linking HTML buttons ---------
+// --------- Linking HTML Buttons ---------
 // Clear button
-const clearBtn = document.querySelector('#clearBtn');
+const CLEAR = document.querySelector('#clearBtn');
 
 // Operation buttons
-const addBtn = document.querySelector('#addBtn');
-const subtractBtn = document.querySelector('#subtractBtn');
-const multiplyBtn = document.querySelector('#multiplyBtn');
-const divideBtn = document.querySelector('#divideBtn');
-const equalBtn = document.querySelector('#equalBtn');
+const ADD = document.querySelector('#addBtn');
+const SUBTRACT = document.querySelector('#subtractBtn');
+const MULTIPLY = document.querySelector('#multiplyBtn');
+const DIVIDE = document.querySelector('#divideBtn');
+const EQUAL = document.querySelector('#equalBtn');
 
 // Number buttons
-const oneBtn = document.querySelector('#oneBtn');
-const twoBtn = document.querySelector('#twoBtn');
-const threeBtn = document.querySelector('#threeBtn');
-const fourBtn = document.querySelector('#fourBtn');
-const fiveBtn = document.querySelector('#fiveBtn');
-const sixBtn = document.querySelector('#sixBtn');
-const sevenBtn = document.querySelector('#sevenBtn');
-const eightBtn = document.querySelector('#eightBtn');
-const nineBtn = document.querySelector('#nineBtn');
-const zeroBtn = document.querySelector('#zeroBtn');
+const ONE = document.querySelector('#oneBtn');
+const TWO = document.querySelector('#twoBtn');
+const THREE = document.querySelector('#threeBtn');
+const FOUR = document.querySelector('#fourBtn');
+const FIVE = document.querySelector('#fiveBtn');
+const SIX = document.querySelector('#sixBtn');
+const SEVEN = document.querySelector('#sevenBtn');
+const EIGHT = document.querySelector('#eightBtn');
+const NINE = document.querySelector('#nineBtn');
+const ZERO = document.querySelector('#zeroBtn');
 
 
+// --------- Event Listeners ---------
+let 
