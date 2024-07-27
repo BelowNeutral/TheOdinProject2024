@@ -53,6 +53,7 @@ function clear() {
 // --------- Linking HTML Buttons ---------
 // Input Bar (Screen)
 const INPUT = document.querySelector('#screen');
+
 // Clear button
 const CLEAR = document.querySelector('#clearBtn');
 
