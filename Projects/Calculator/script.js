@@ -31,16 +31,6 @@ const EQUAL = document.querySelector('#equalBtn');
 // const ZERO = document.querySelector('#zeroBtn');
 
 
-// --------- Displaying Numbers On Screen ---------
-const numPad = document.querySelectorAll('.number');
-for (let i = 0; i < numPad.length; i++) {
-    numPad[i].addEventListener('click', function(event) {
-        displayValue = i;
-        SCREEN.value += event.target.textContent;
-    })
-}
-
-
 // --------- Functions For Basic Operations ---------
 // Basic functions (add, sub, mult, div)
 function add(num1, num2) {
@@ -104,6 +94,14 @@ function divide(num1, num2) {
 
 
 // --------- Event Listeners ---------
+// For-loop that displays numbers on screen
+const numPad = document.querySelectorAll('.number');
+for (let i = 0; i < numPad.length; i++) {
+    numPad[i].addEventListener('click', function(event) {
+        displayValue = i;
+        SCREEN.value += event.target.textContent;
+    })
+}
 // Function that clears everything from the screen
 CLEAR_SCREEN.addEventListener('click', () => {
     SCREEN.value = "";
