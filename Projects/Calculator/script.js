@@ -1,8 +1,8 @@
 // vvvvvvv Declaring Variables vvvvvvv
 let displayValue = 0;
-let firstNumber = "";
-let operator = "";
-let secondNumber = "";
+// let firstNumber = "";
+// let operator = "";
+// let secondNumber = "";
 
 // --------- Linking HTML Buttons ---------
 // Input Bar (Screen)
@@ -31,10 +31,11 @@ const EQUAL = document.querySelector('#equalBtn');
 // const ZERO = document.querySelector('#zeroBtn');
 
 
-// --------- Function For Displaying Numbers On Screen ---------
+// --------- Displaying Numbers On Screen ---------
 const numPad = document.querySelectorAll('.number');
 for (let i = 0; i < numPad.length; i++) {
     numPad[i].addEventListener('click', function(event) {
+        displayValue = i;
         SCREEN.value += event.target.textContent;
     })
 }
@@ -45,44 +46,42 @@ for (let i = 0; i < numPad.length; i++) {
 function add(num1, num2) {
     let expression = `${num1} + ${num2}`;
     let result = num1 + num2;
-    let equal = `= ${result}`;
+    let equal = ` = ${result}`;
     // console.log(result);
-    return expression;
+    return expression + equal;
 }
+
+// console.log(add(5,5));
 
 function subtract(num1, num2) {
     let expression = `${num1} - ${num2}`;
     let result = num1 - num2;
-    let equal = `= ${result}`;
+    let equal = ` = ${result}`;
     // console.log(result);
-    return expression;
+    return expression + equal;
 }
+
+// console.log(subtract(5,2));
 
 function multiply(num1, num2) {
     let expression = `${num1} * ${num2}`;
     let result = num1 * num2;
-    let equal = `= ${result}`;
+    let equal = ` = ${result}`;
     // console.log(result);
-    return expression;
+    return expression + equal;
 }
+
+// console.log(multiply(5,5));
 
 function divide(num1, num2) {
     let expression = `${num1} / ${num2}`;
     let result = num1 / num2;
-    let equal = `= ${result}`;
+    let equal = ` = ${result}`;
     // console.log(result);
-    return expression;
+    return expression + equal;
 }
 
-
-// Function that clears everything from the screen
-for (let i = 0; i < SCREEN; i++) {
-    CLEAR_SCREEN.addEventListener('click', function(event) {
-        SCREEN.textContent = "";
-    })
-}
-
-
+// console.log(divide(10,5));
 
 
 // Function that determines which of the above functions to use
@@ -105,13 +104,11 @@ for (let i = 0; i < SCREEN; i++) {
 
 
 // --------- Event Listeners ---------
-// document.addEventListener('DOMContentLoaded', function() {
-//     function clearScreen() {
-//         SCREEN.textContent = 0; // Resetting screen to default value
-//     }
+// Function that clears everything from the screen
+CLEAR_SCREEN.addEventListener('click', () => {
+    SCREEN.value = "";
+})
 
-//     CLEAR_SCREEN.addEventListener('click', clearScreen);
-// });
 
 
 
