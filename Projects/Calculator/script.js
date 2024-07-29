@@ -102,7 +102,26 @@ for (let i = 0; i < numPad.length; i++) {
         SCREEN.value += event.target.textContent;
     })
 }
-// Function that clears everything from the screen
+
+// Displays operator symbols on the screen
+const operatorBtn = document.querySelectorAll('.operator');
+for (let i = 0; i < operatorBtn.length; i++) {
+    operatorBtn[i].addEventListener('click', function(event) {
+        displayValue = i;
+        SCREEN.value += event.target.textContent;
+    })
+}
+
+// Displays equal symbol on the screen
+const equalBtn = document.querySelectorAll('.equal');
+for (let i = 0; i < equalBtn.length; i++) {
+    equalBtn[i].addEventListener('click', function(event) {
+        displayValue = i;
+        SCREEN.value += event.target.textContent;
+    })
+}
+
+// Clears everything from the screen
 CLEAR_SCREEN.addEventListener('click', () => {
     SCREEN.value = "";
 })
