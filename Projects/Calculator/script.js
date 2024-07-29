@@ -1,8 +1,8 @@
 // vvvvvvv Declaring Variables vvvvvvv
 let displayValue = 0;
-// let firstNumber = "";
-// let operator = "";
-// let secondNumber = "";
+let firstNumber = "";
+let operator = "";
+let secondNumber = "";
 
 // --------- Linking HTML Buttons ---------
 // Input Bar (Screen)
@@ -75,22 +75,6 @@ function divide(num1, num2) {
 
 
 // Function that determines which of the above functions to use
-// function operate(operator, num1, num2) {
-//     switch (operator) {
-//         case "+":
-//             return num1 + num2;
-//         case "-":
-//             return num1 - num2;
-//         case "x":
-//             return num1 * num2;
-//         case "/":
-//             return num1 / num2;
-//         case "C":
-//             return clearScren();
-//         default:
-//             return "invalid";
-//     }
-// }
 
 
 // --------- Event Listeners ---------
