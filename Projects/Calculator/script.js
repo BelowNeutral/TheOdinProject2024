@@ -40,8 +40,6 @@ for (let i = 0; i < numPad.length; i++) {
 }
 
 
-
-
 // --------- Functions For Basic Operations ---------
 // Basic functions (add, sub, mult, div)
 function add(num1, num2) {
@@ -78,11 +76,12 @@ function divide(num1, num2) {
 
 
 // Function that clears everything from the screen
-// function clear() {
-//     if (CLEAR === true) {
-//         document.querySelector('#screen').textContent = "";
-//     }
-// }
+for (let i = 0; i < SCREEN; i++) {
+    CLEAR_SCREEN.addEventListener('click', function(event) {
+        SCREEN.textContent = "";
+    })
+}
+
 
 
 
