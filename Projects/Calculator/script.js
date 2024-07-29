@@ -1,8 +1,8 @@
 // vvvvvvv Declaring Variables vvvvvvv
-let displayValue = 0;
-let firstNumber = "";
-let operator = "";
-let secondNumber = "";
+let displayValue = '';
+let firstNumber = '';
+let operator = '';
+let secondNumber = '';
 
 // --------- Linking HTML Buttons ---------
 // Input Bar (Screen)
@@ -19,96 +19,94 @@ const DIVIDE = document.querySelector('#divideBtn');
 const EQUAL = document.querySelector('#equalBtn');
 
 // Number buttons
-// const ONE = document.querySelector('#oneBtn');
-// const TWO = document.querySelector('#twoBtn');
-// const THREE = document.querySelector('#threeBtn');
-// const FOUR = document.querySelector('#fourBtn');
-// const FIVE = document.querySelector('#fiveBtn');
-// const SIX = document.querySelector('#sixBtn');
-// const SEVEN = document.querySelector('#sevenBtn');
-// const EIGHT = document.querySelector('#eightBtn');
-// const NINE = document.querySelector('#nineBtn');
-// const ZERO = document.querySelector('#zeroBtn');
-
+const numPad = document.querySelectorAll('.number');
 
 // --------- Functions For Basic Operations ---------
-// Basic functions (add, sub, mult, div)
-function add(num1, num2) {
-    let expression = `${num1} + ${num2}`;
-    let result = num1 + num2;
-    let equal = ` = ${result}`;
-    // console.log(result);
-    return expression + equal;
+let addition = function(num1, num2) {
+    return num1 + num2;
 }
 
-// console.log(add(5,5));
-
-function subtract(num1, num2) {
-    let expression = `${num1} - ${num2}`;
-    let result = num1 - num2;
-    let equal = ` = ${result}`;
-    // console.log(result);
-    return expression + equal;
+let subtraction = function(num1, num2) {
+    return num1 - num2;
 }
 
-// console.log(subtract(5,2));
-
-function multiply(num1, num2) {
-    let expression = `${num1} * ${num2}`;
-    let result = num1 * num2;
-    let equal = ` = ${result}`;
-    // console.log(result);
-    return expression + equal;
+let multiplication = function(num1, num2) {
+    return num1 * num2;
 }
 
-// console.log(multiply(5,5));
-
-function divide(num1, num2) {
-    let expression = `${num1} / ${num2}`;
-    let result = num1 / num2;
-    let equal = ` = ${result}`;
-    // console.log(result);
-    return expression + equal;
+let division = function(num1, num2) {
+    if (num2 === 0) {
+        return "Error"; // Handle division by zero
+    }
+    return num1 / num2;
 }
-
-// console.log(divide(10,5));
-
 
 // Function that determines which of the above functions to use
-
+function operate(operator, num1, num2) {
+    switch (operator) {
+        case '+':
+            return addition(num1, num2);
+        case '-':
+            return subtraction(num1, num2);
+        case '*':
+            return multiplication(num1, num2);
+        case '÷':
+            return division(num1, num2);
+        default:
+            return "Invalid Operation";
+    }
+}
 
 // --------- Event Listeners ---------
 // For-loop that displays numbers on screen
-const numPad = document.querySelectorAll('.number');
-for (let i = 0; i < numPad.length; i++) {
-    numPad[i].addEventListener('click', function(event) {
-        displayValue = i;
+numPad.forEach(button => {
+    button.addEventListener('click', function(event) {
         SCREEN.value += event.target.textContent;
-    })
-}
+    });
+});
 
 // Displays operator symbols on the screen
-const operatorBtn = document.querySelectorAll('.operator');
-for (let i = 0; i < operatorBtn.length; i++) {
-    operatorBtn[i].addEventListener('click', function(event) {
-        displayValue = i;
-        SCREEN.value += event.target.textContent;
-    })
-}
+const operatorBtns = document.querySelectorAll('.operator');
+operatorBtns.forEach(button => {
+    button.addEventListener('click', function(event) {
+        if (SCREEN.value !== '') {
+            if (firstNumber === '') {
+                firstNumber = SCREEN.value;
+                operator = event.target.textContent;
+                SCREEN.value = '';
+            } else if (secondNumber === '') {
+                secondNumber = SCREEN.value;
+                firstNumber = operate(operator, parseFloat(firstNumber), parseFloat(secondNumber));
+                operator = event.target.textContent;
+                SCREEN.value = '';
+            }
+        } else {
+            operator = event.target.textContent;
+        }
+    });
+});
 
-// Displays equal symbol on the screen
-const equalBtn = document.querySelectorAll('.equal');
-for (let i = 0; i < equalBtn.length; i++) {
-    equalBtn[i].addEventListener('click', function(event) {
-        displayValue = i;
-        SCREEN.value += event.target.textContent;
-    })
-}
+// Calculate and display result when equal button is clicked
+EQUAL.addEventListener('click', function() {
+    if (firstNumber !== '' && operator !== '' && SCREEN.value !== '') {
+        secondNumber = SCREEN.value;
+        const result = operate(operator, parseFloat(firstNumber), parseFloat(secondNumber));
+        SCREEN.value = result;
+        // Reset for the next operation
+        firstNumber = result.toString();
+        operator = '';
+        secondNumber = '';
+    }
+});
 
 // Clears everything from the screen
 CLEAR_SCREEN.addEventListener('click', () => {
-    SCREEN.value = "";
-})
+    SCREEN.value = '';
+    firstNumber = '';
+    operator = '';
+    secondNumber = '';
+});
+
 
 
 
